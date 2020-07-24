@@ -14,3 +14,10 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+/* $router->get('perritos', function(){
+    return $peroos = Perro::all();
+}); */
+
+$router->get('/perritos', ['uses' => 'PerroController@index']);
+$router->post('/perritos', ['uses' => 'PerroController@store']);
